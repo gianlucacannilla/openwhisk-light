@@ -1,12 +1,12 @@
 {
-  "name": "my-openwhisk-light",
+  "name": "openwhisk-light",
   "version": "1.0.0",
   "description": "",
   "main": "openwhisklight.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node openwhisklight.js",
-    "stop": "killall -signal SIGINT my-openwhisk-light"
+    "stop": "killall -signal SIGINT openwhisk-light"
   },
   "repository": {
     "type": "git",
