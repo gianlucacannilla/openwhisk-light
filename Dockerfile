@@ -4,5 +4,5 @@ WORKDIR /usr/app
 COPY package*.json ./
 RUN apt-get update && apt-get install -y git ssh
 RUN npm install git+https://git@github.com/kpavel/openwhisk-light.git pouchdb && npm cache clean && rm -rf /tmp/*
-CMD ["sh", "-c", "cd /node_modules/openwhisk-light; npm start"]
+CMD ["sh", "-c", "cd /node_modules/my-openwhisk-light; npm start"]
 
