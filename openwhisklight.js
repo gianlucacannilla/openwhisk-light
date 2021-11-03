@@ -3,7 +3,7 @@ const config = require('./config'),
       routes = require('./routes'),
       app = require('express')();
 
-process.title = "my-openwhisk-light";
+process.title = "openwhisk-light";
 
 console.debug("Config: " + JSON.stringify(config));
 
