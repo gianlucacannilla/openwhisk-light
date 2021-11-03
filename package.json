@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node openwhisklight.js",
-    "stop": "killall -signal SIGINT openwhisk-light"
+    "stop": "killall -signal SIGINT my-openwhisk-light"
   },
   "repository": {
     "type": "git",
