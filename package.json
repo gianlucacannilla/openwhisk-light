@@ -1,5 +1,5 @@
 {
-  "name": "openwhisk-light",
+  "name": "my-openwhisk-light",
   "version": "1.0.0",
   "description": "",
   "main": "openwhisklight.js",
