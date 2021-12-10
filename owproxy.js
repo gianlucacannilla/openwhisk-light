@@ -33,8 +33,20 @@ module.exports = {
 
   getAction: function getAction(req) {
     var api_key = from_auth_header(req);
-    var ow_client = openwhisk({ api: nextOpenwhiskApi, api_key });
+    var ow_client = openwhisk({ api: nextOpenwhiskApi, api_key, ignore_certs: true });
+    var blocking = true;
+    var result = true
     return ow_client.actions.get({actionName: req.params.actionName, namespace: req.params.namespace});
+  },
+
+  getActionInvoke: function getActionInvoke(req) {
+    var api_key = from_auth_header(req);
+    var ow_client = openwhisk({ api: nextOpenwhiskApi, api_key, ignore_certs: true });
+    const actionName = req.params.actionName;
+    const nameSpace = req.params.namespace;
+    const blocking = true, result = true;
+    const params = req.body;
+    return ow_client.actions.invoke({actionName,nameSpace, blocking, result, params});
   },
 
   deleteAction: function deleteAction(req){

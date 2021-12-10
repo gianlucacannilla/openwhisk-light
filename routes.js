@@ -18,6 +18,7 @@ function invokeHandlerWithPackage(req, res) {
   invokeHandler(req, res);
 }
 
+//ToDo AZIONE INVOCAZIONE
 function invokeHandler(req, res) {
   req.params.actionName = '/' + req.params.namespace + '/' + req.params.actionName;
   actions.handleInvokeAction(req, res);
@@ -33,6 +34,8 @@ function getHandlerWithPackage(req, res) {
 }
 
 function getHandler(req, res) {
+  console.log(req);
+  console.debug(req);
   req.params.actionName = '/' + req.params.namespace + '/' + req.params.actionName;
   actions.handleGetAction(req, res);
 }

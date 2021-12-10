@@ -1,4 +1,4 @@
-const logger = require('winston');
+/*const logger = require('winston');
 
 logger.add(logger.transports.File, { filename: 'owl.log' });
 console.log=logger.info;
@@ -8,7 +8,7 @@ console.warn=logger.warn;
 console.error=logger.error;
 
 logger.level = process.env.OWL_LOG_LEVEL || 'debug';
-
+*/
 
 module.exports = {
 
@@ -20,6 +20,7 @@ module.exports = {
   backend_openwhisk: process.env.OWL_NEXT_OPENWHISK || 'https://openwhisk.ng.bluemix.net',
   host_capacity: process.env.OWL_HOST_CAPACITY || 5,
   init_timeout : process.env.OWL_ACTION_INIT_TIMEOUT || 10, // seconds
+  ignore_certs : process.env.OWL_IGNORE_CERTS || 'false',
   preemption: {
     enabled: process.env.OWL_PREEMPTION_ENABLED || 'false',
     period: process.env.OWL_PREEMPTION_PERIOD || 10, // seconds

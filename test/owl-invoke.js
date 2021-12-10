@@ -1,7 +1,8 @@
 var openwhisk = require('openwhisk');
 
 function main(params) {
-  var ow = openwhisk();  
+  var options = {ignore_certs:true};
+  var ow = openwhisk(options);  
   console.log("INVOKING owl-test");
   //return ow.actions.invoke({actionName:'owl-test', blocking:true, params:params}).then(activation => {
   return ow.actions.invoke({actionName:'/whisk.system/utils/echo', blocking:true, params:params}).then(activation => {

@@ -1,0 +1,25 @@
+#FROM resin/qemux86-64-node:slim
+#FROM node:6-slim
+#WORKDIR /usr/src/app
+#COPY package*.json ./
+#RUN apt-get update && apt-get install -y git ssh
+#RUN npm install pouchdb && npm install --save process-nextick-args && npm cache clean && rm -rf /tmp/*
+#COPY . .
+#CMD ["sh", "-c", "cd /node_modules/openwhisk-light; npm start"]
+#CMD [ "node", "openwhisklight.js" ]
+#CMD ["node", "openwhisklight"]
+
+#FROM node:6-slim
+
+#RUN mkdir /app
+#WORKDIR /app
+#ENV PATH /app/node_modules/.bin:$PATH
+#COPY package.json /app/
+#RUN apt-get update && apt-get install -y git ssh
+#RUN npm install pouchdb && npm install --save process-nextick-args && npm cache clean && rm -rf /tmp/*
+# Or if you're using Yarn
+# ADD package.json yarn.lock /app/
+# RUN yarn install
+
+#COPY . /app/
+#CMD ["node", "openwhisklight"]
